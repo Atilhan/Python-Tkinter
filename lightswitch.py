@@ -9,7 +9,7 @@ global is_on
 is_on = True
 
 
-#labels
+#label & vorm van de menu
 my_label = Label(root, 
     text="The Switch Is On",
     fg="green",
@@ -17,6 +17,7 @@ my_label = Label(root,
 
 my_label.pack(pady=20)
 
+#zorgt ervoor dat er met een function & booleans aan & uit gaan
 def switch():
     global is_on
     if is_on:
@@ -30,9 +31,11 @@ def switch():
         is_on = True
         print('Its on now! ')
 
+#images / icons worden hier geimporteert 
 on = PhotoImage(file="on_1.png")
 off = PhotoImage(file="off_2.png")
 
+#Klikbaarheid op de images / icons
 on_button = Button(root, image=on, bd=0, command=switch)
 on_button.pack(pady=50)
 
